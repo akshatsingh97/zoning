@@ -1,0 +1,19 @@
+# secrets
+.env
+.env.*
+!.env.example
+
+# dependencies and builds
+node_modules/
+dist/
+build/
+coverage/
+*.tsbuildinfo
+
+# zoning runtime data
+.zoning/
+
+# os and editor
+.DS_Store
+.idea/
+.vscode/
