@@ -5,12 +5,14 @@
 AI coding agents work freely in most of the code. Files with a big blast radius, like payments, auth and infra, need a permit: a short intent contract in the developer's own words, checked by Muse Spark before the change can land.
 
 Built during the Meta Global AI Developer Hackathon (Oct 26 – Nov 4, 2026),
-Indie Developer track, for the **Build for Your World** problem statement
-("a problem you know firsthand"): AI coding agents editing production code
-need scrutiny where mistakes hurt — in proportion to a file's blast radius,
-at the moment the agent edits it, backed by a commit guard. Everything in
-this repo — scan, contracts, watcher, check, guard, server, dashboard, skill —
-was built during the hackathon.
+Indie Developer track, for the **Build for Your World** problem statement:
+"Bring Meta's models into your domain. Solve a problem you know firsthand,
+free up time and mental space, and make something possible that wasn't
+before." Zoning brings Muse Spark into the developer's domain — AI coding
+agents editing production code get scrutiny where mistakes hurt, in
+proportion to a file's blast radius, at the moment the agent edits it, backed
+by a commit guard. Everything in this repo — scan, contracts, watcher, check,
+guard, server, dashboard, skill — was built during the hackathon.
 
 ## How it works
 

@@ -6,7 +6,7 @@ AI coding agents now edit production code, including payments, auth and infrastr
 
 Zoning puts scrutiny where mistakes hurt: in proportion to a file's blast radius, at the moment the agent edits it, and backed by a commit guard.
 
-Hackathon problem statement this answers: **Build for Your World** ("a problem you know firsthand"). Zoning answers it for the world developers now live in: AI coding agents editing production code. Scrutiny lands where mistakes hurt — in proportion to a file's blast radius, at the moment the agent edits it, backed by a commit guard.
+Hackathon problem statement this answers: **Build for Your World** — "Bring Meta's models into your domain. Solve a problem you know firsthand, free up time and mental space, and make something possible that wasn't before." Zoning answers it for the world developers now live in: AI coding agents editing production code, governed by Muse Spark. Scrutiny lands where mistakes hurt — in proportion to a file's blast radius, at the moment the agent edits it, backed by a commit guard.
 
 ## Concepts
 
