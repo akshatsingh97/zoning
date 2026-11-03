@@ -1,0 +1,13 @@
+# Suggested zones. Copy entries into zones.yml after review.
+# Zoning never writes zones.yml itself.
+version: 1
+critical:
+  - path: packages/auth/session.ts
+    reason: "path rule: auth (auth)"
+  - path: packages/payment/capture.ts
+    reason: "path rule: money (money); imported by 1 file"
+  - path: packages/payment/checkout.ts
+    reason: "path rule: money (money)"
+shared:
+  - path: packages/utils/pricing.ts
+    reason: imported by 4 files
