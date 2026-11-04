@@ -16,12 +16,12 @@ export function ContractPanel({
   return (
     <section aria-label="Contract">
       <h2>Contract</h2>
-      {active === null && <p>No active contract.</p>}
+      {active === null && <p className="empty">No active contract.</p>}
       {active !== null && (
         <div>
-          <p className="filename">{active.contract.task}</p>
+          <p className="task">{active.contract.task}</p>
           <h3>In scope</h3>
-          <ul>
+          <ul className="mono-list">
             {active.contract.in_scope.map((f) => (
               <li key={f}>{f}</li>
             ))}
@@ -29,7 +29,7 @@ export function ContractPanel({
           {active.contract.must_change.length > 0 && (
             <>
               <h3>Must change</h3>
-              <ul>
+              <ul className="rules do">
                 {active.contract.must_change.map((r) => (
                   <li key={r}>{r}</li>
                 ))}
@@ -39,7 +39,7 @@ export function ContractPanel({
           {active.contract.must_not_change.length > 0 && (
             <>
               <h3>Must not change</h3>
-              <ul>
+              <ul className="rules dont">
                 {active.contract.must_not_change.map((r) => (
                   <li key={r}>{r}</li>
                 ))}
@@ -49,7 +49,7 @@ export function ContractPanel({
           {contract.gapQuestions.length > 0 && (
             <>
               <h3>Gap questions</h3>
-              <ol>
+              <ol className="gaps">
                 {contract.gapQuestions.map((q) => (
                   <li key={q}>{q}</li>
                 ))}
@@ -57,7 +57,7 @@ export function ContractPanel({
             </>
           )}
           <h3>Latest check</h3>
-          {latest === undefined && <p>No checks yet.</p>}
+          {latest === undefined && <p className="empty">No checks yet.</p>}
           {latest !== undefined && (
             <div>
               <p>

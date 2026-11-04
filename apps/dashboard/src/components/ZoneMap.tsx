@@ -26,13 +26,11 @@ export function ZoneMap({
     <section aria-label="Zone map">
       <h2>Zone map</h2>
       <p className="counts">
-        <span className="tier critical">{zones.counts.critical} critical</span>
-        {' · '}
-        <span className="tier shared">{zones.counts.shared} shared</span>
-        {' · '}
-        <span className="tier open">{zones.counts.open} open</span>
+        <span className="badge critical">{zones.counts.critical} critical</span>
+        <span className="badge shared">{zones.counts.shared} shared</span>
+        <span className="badge open">{zones.counts.open} open</span>
       </p>
-      {zones.files.length === 0 && <p>No files found. Is zones.yml set up?</p>}
+      {zones.files.length === 0 && <p className="empty">No files found. Is zones.yml set up?</p>}
       {[...groups.entries()].map(([folder, rows]) => (
         <div key={folder} className="folder">
           <h3>{folder}</h3>

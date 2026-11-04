@@ -19,16 +19,13 @@ function timeOf(at: string): string {
   return Number.isNaN(date.getTime()) ? at : date.toLocaleTimeString();
 }
 
-export function LiveFeed({ events, live }: { events: WatchEvent[]; live: boolean }): JSX.Element {
+export function LiveFeed({ events }: { events: WatchEvent[] }): JSX.Element {
   return (
     <section aria-label="Live feed">
-      <h2>
-        Live feed{' '}
-        <span className={live ? 'live-dot on' : 'live-dot off'} title={live ? 'live' : 'reconnecting'}>
-          {live ? 'live' : 'reconnecting'}
-        </span>
-      </h2>
-      {events.length === 0 && <p>Waiting for edits — run zoning watch in another terminal.</p>}
+      <h2>Live feed</h2>
+      {events.length === 0 && (
+        <p className="empty">Waiting for edits — run zoning watch in another terminal.</p>
+      )}
       <ol className="feed">
         {events.map((e, i) => (
           <li key={`${e.at}-${e.file}-${i}`} className={`event ${e.type}`}>

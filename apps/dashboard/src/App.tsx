@@ -72,10 +72,28 @@ export function App(): JSX.Element {
   return (
     <div className="app">
       <header>
-        <h1>Zoning</h1>
-        <button type="button" onClick={() => void refresh()}>
-          Refresh
-        </button>
+        <div className="brand">
+          <div className="logo" aria-hidden="true">
+            <span />
+            <span />
+            <span />
+          </div>
+          <div className="brand-text">
+            <h1>Zoning</h1>
+            <span className="tagline">zoning laws for AI in your codebase</span>
+          </div>
+        </div>
+        <div className="header-actions">
+          <span
+            className={live ? 'live-dot on' : 'live-dot off'}
+            title={live ? 'connected to watcher stream' : 'reconnecting'}
+          >
+            {live ? 'live' : 'reconnecting'}
+          </span>
+          <button type="button" onClick={() => void refresh()}>
+            Refresh
+          </button>
+        </div>
       </header>
       {error !== null && <p className="error">Failed to load: {error}</p>}
       <main>
@@ -89,7 +107,7 @@ export function App(): JSX.Element {
           )}
         </div>
         <div className="column">
-          <LiveFeed events={events} live={live} />
+          <LiveFeed events={events} />
         </div>
       </main>
     </div>
